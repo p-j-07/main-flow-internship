@@ -1,0 +1,158 @@
+# Common String Methods
+# len(): It returns the total number of characters in a String
+
+s="HelloEveryone"
+print(len(s))
+
+# upper():This method converts all characters to uppercase
+# lower(): This method converts all characters to lowercase
+
+s="Hello Everyone"
+print(s.upper())
+s1="Hello jatin"
+print(s1.lower())
+
+
+# FORMATTING STRING
+"""Python provides several ways to provide variables inside settings"""
+
+# Using f-string()
+# syntax
+name="jatin"
+age=21
+print(f"Name:{name},Age:{age}")
+
+# Using format()
+s="My  name is {} and Iam {} years old".format("jatin",22)
+print(s)
+
+# Using in string Membership Testing
+s="Hellojatinbhai"
+print("Hello" in s)
+print("Z" in s)
+
+"""String slicing is the way to extract the portion of a string by specifying the start and end indexes."""
+s="HelloEveryone"
+print(s[1:4])   
+print(s[:3])
+print(s[3:])
+print(s[::-2])
+
+
+
+
+
+#Creating a list
+#syntax:
+'''a=[1,2,3,4,5]  #list of integers
+b=['apple','banana','orange','cherry'] #list of strings
+c=[1,'jatin',112,True] #mixed datatypes
+print(a)
+print(b)
+print(c)'''
+
+# Using the list() Constructor
+'''a= list((1,2,3,'apple, 4.5'))  # By creating a tuple
+print(a)'''
+
+# Creating a list with repeated elements
+a=[2] * 5
+b=[0] * 7
+print(a)
+print(b)
+
+# Accessing list elements
+'''List can be accessed using indexing'''
+a=[10,20,30,40,50]
+print(a[1])
+print(a[-2])
+
+'''Adding an element into a list
+append:Adds an elements at the end of the list.
+extends:Adds multiple elements at the end of the list.
+insert:Adds an element at a specific position'''
+#syntax:
+
+a=[1,10,4,56,36] 
+a.append(20)
+print("After append:",a)
+a.insert(0,4)
+print("After inserting:",a)
+a.extend((10,45,36))
+print("After extending:",a)
+
+# Updating an elements in a list
+'''We can change the value of an elements by accessing it using its index'''
+a=[10,20,30,40,50]
+a[1]=25
+print(a)
+
+# Removing Elements from List
+''''remove():Removes the first occurence of an element.
+pop():Removes the element at a specified index or the last element if no index is specified.
+del statement:Deletes an element at a specified index.'''
+a=[10,20,30,40,50]
+a.remove(30)
+print("After removing:",a)
+
+popped_val =a.pop(1)
+print("popped element:",popped_val)
+print("After pop(1)",a)
+
+del a[2]
+print("After del",a)
+
+#Iteration in List methods()
+#Using For loop
+my_list=[10,20,30,40,50]
+for item in my_list:
+
+#Using while loop()
+my_list=[10,20,30,40,50]
+i=0
+while i<len(my_list):
+    print(my_list[i])
+    i+=1
+
+#Using enumerate():
+my_list=[10,20,30,40,50]
+for index item in enumerate(my_list)
+print(f"Index:{index},Item:{items}")
+
+
+
+# Creating a Tuple in python:
+my_tuple = (1, 2, 3, 4, 5)
+print(my_tuple)  
+
+#Accessing Elements in python:
+print(my_tuple[0]) 
+print(my_tuple[3])  
+
+#Slicing a tuple
+print(my_tuple[1:4])  
+print(my_tuple[:3])   
+print(my_tuple[2:])
+
+# Concatenating tuples
+tuple1 = (1, 2)
+tuple2 = (3, 4)
+result = tuple1 + tuple2
+print(result)  
+
+# Repeating a tuple
+repeated_tuple = tuple1 * 3
+print(repeated_tuple) 
+
+# Membership test
+print(3 in my_tuple)  
+print(6 in my_tuple)  
+
+# Iterating through a tuple
+for element in my_tuple:
+    print(element)
+
+
+
+
+
