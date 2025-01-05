@@ -1,0 +1,36 @@
+
+'''import pandas as pd
+
+# reading csv file 
+df = pd.read_csv("people.csv")
+df'''
+
+import pandas as pd 
+
+data = {'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Alice', 'Eve'], 
+        'Age': [25, None, 30, None, 25, 28], 
+        'City': ['New York', 'London', 'Paris', 'Tokyo', 'New York', 'Berlin']}
+df = pd.DataFrame(data)
+
+# Check for missing values
+print("Missing values per column:")
+print(df.isnull().sum()) 
+
+# Handle missing values by filling with the mean
+df['Age'] = df['Age'].fillna(df['Age'].mean()) 
+
+# Remove duplicate rows
+df = df.drop_duplicates()
+
+# Print the cleaned data
+print(df)
+
+
+filtered_df = df[df['Age'] > 25]
+print(filtered_df)
+
+sorted_df = df.sort_values(by='Age')
+print(sorted_df)
+
+grouped_df = df.groupby('City')['Age'].mean()
+print(grouped_df)
