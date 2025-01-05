@@ -1,0 +1,30 @@
+
+import requests
+from bs4 import BeautifulSoup
+
+# Send a GET request to the website
+url ="https://www.geeksforgeeks.org/python-programming-language"
+response = requests.get(url)
+
+# Check if the request was successful
+if response.status_code == 200:
+    # Parse the HTML content of the page
+    soup = BeautifulSoup(response.content, 'html.parser')
+
+    # Extract text from all paragraphs
+    paragraphs = soup.find_all('p')
+    for p in paragraphs:
+        print(p.text)
+
+    # Extract links from all anchor tags
+    links = soup.find_all('a')
+    for link in links:
+        print(link.get('href'))
+
+    # Extract images from all image tags
+    images = soup.find_all('img')
+    for image in images:
+        print(image.get('src'))
+
+else:
+    print("Failed to retrieve the webpage. Status code:", response.status_code)
